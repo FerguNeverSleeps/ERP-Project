@@ -1,0 +1,7 @@
+Escribir el siguiente comando en la raiz del repositorio antes de cualquier cosa:
+ln -s pre-commit.sh .git/hooks/pre-commit
+
+Solucionar problema de ultimo commit en git
+git reset --hard HEAD~1
+Nota: el numero 1 significa que es el ultimo commit ejecutado, por ejemplo si se sustituye por el 3 por ejemplo sera el antepenultimo a eliminar.
+

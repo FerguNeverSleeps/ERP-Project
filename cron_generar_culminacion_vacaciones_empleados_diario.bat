@@ -1,0 +1,1 @@
+C:\xampp\php\php.exe -f "C:\xampp\htdocs\amaxonia_planilla\procesos\generar_culminacion_vacaciones_empleados_diario.php"

@@ -1,0 +1,12 @@
+Para que funcione el datatable Editable en toda la aplicacion con tablas que posean gran cantidad de columnas
+hacer lo siguiente
+
+nano /etc/apache2/apache2.conf 
+
+Agregar :
+
+LimitRequestLine 100000
+
+Luego 
+
+/etc/init.d/apache2 restart
