@@ -1,0 +1,11 @@
+﻿1     	OSCAR ALMANZA      	05/26/2016 08:34:13 a.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/26/2016 05:02:43 p.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/27/2016 08:08:52 a.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/27/2016 05:04:28 p.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/28/2016 08:27:31 a.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/28/2016 05:02:36 p.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/29/2016 08:25:06 a.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/29/2016 05:01:59 p.m.	Entrada	Local       	0               
+1     	OSCAR ALMANZA      	05/30/2016 08:05:08 a.m.	Entrada	Local       	0               
+2     	OSCAR ALMANZA      	05/30/2016 05:04:46 p.m.	Entrada	Local       	0               
+9999     	xxx xxxxx     	06/15/2016 11:11:11 a. m. 	Entrada	Suzuki      	0               

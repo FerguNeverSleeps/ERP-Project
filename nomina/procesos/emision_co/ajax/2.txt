@@ -1,0 +1,289 @@
+{
+    "type": "102",
+    "payroll": {
+        "notas": [
+            "nota 1",
+            "nota 2"
+        ],
+        "periodo": {
+            "fecha_ingreso": "2021-01-01",
+            "fecha_retiro": "2021-06-01",
+            "fecha_liquidacion_inicio": "2021-02-01",
+            "fecha_liquidacion_fin": "2021-02-28",
+            "fecha_gen": "2021-10-29",
+            "tiempo_laborado": 30
+        },
+        "numero_secuencia_xml": {
+            "prefijo": "test",
+            "consecutivo": 1
+        },
+        "lugar_generacion_xml": {
+            "pais": "CO",
+            "departamento": "19",
+            "municipio": "19001",
+            "idioma": "es"
+        },
+        "proveedor_xml": {
+            "razon_social": "Nodexum SAS",
+            "nit": "901285179",
+            "dv": "0",
+            "software_id": "83b629aa-064d-47fc-98bf-7c22ee93f246",
+            "software_pin": "51423"
+        },
+        "informacion_general": {
+            "version": "1.0",
+            "ambiente": "2",
+            "tipo_xml": "102",
+            "fecha_gen": "2021-10-29",
+            "hora_gen": "20:58:28",
+            "periodo_nomina": 5,
+            "tipo_moneda": "COP",
+            "trm": 1
+        },
+        "empleador": {
+            "razon_social": "Nodexum SAS",
+            "nit": "901285179",
+            "dv": "0",
+            "pais": "CO",
+            "departamento": "19",
+            "municipio": "19001",
+            "direccion": "Direccion pruebas"
+        },
+        "trabajador": {
+            "tipo_trabajador": "01",
+            "subtipo_trabajador": "00",
+            "alto_riesgo": false,
+            "tipo_documento": "13",
+            "numero_documento": "1061123123",
+            "primer_apellido": "Perez",
+            "segundo_apellido": "no tiene",
+            "primer_nombre": "Pepito",
+            "otros_nombres": "",
+            "pais_trabajo": "CO",
+            "departamento_trabajo": "19",
+            "municipio_trabajo": "19001",
+            "direccion_trabajo": "Direccion pruebas",
+            "salario_integral": false,
+            "tipo_contrato": "1",
+            "sueldo": 1000000,
+            "codigo_trabajador": 1
+        },
+        "pago": {
+            "forma": "1",
+            "metodo": "10",
+            "banco": "Agrario",
+            "tipo_cuenta": "Ahorros",
+            "numero_cuenta": "11111111111"
+        },
+        "fechas_pago": [
+            "2021-10-05"
+        ],
+        "devengados": {
+            "dias_trabajados": 0,
+            "sueldo_trabajado": 0,
+            "transporte": [
+                {
+                    "auxilio": 100,
+                    "aloj_s": 100,
+                    "aloj_ns": 100
+                }
+            ],
+            "heds": [
+                {
+                    "pago": "100",
+                    "hora_inicio": "2021-11-01T16:00:00",
+                    "hora_fin": "2021-11-01T19:00:00",
+                    "cantidad": "3.5"
+                }
+            ],
+            "hens": null,
+            "hrns": null,
+            "heddfs": null,
+            "hrddfs": null,
+            "hendfs": null,
+            "hrndfs": null,
+            "vacaciones": {
+                "comunes": [
+                    {
+                        "pago": "100",
+                        "fecha_inicio": "2021-11-01",
+                        "fecha_fin": "2021-11-07",
+                        "cantidad": "7"
+                    }
+                ],
+                "compensadas": [
+                    {
+                        "pago": "100",
+                        "cantidad": "3"
+                    }
+                ]
+            },
+            "primas": {
+                "cantidad": 3,
+                "pago": 100,
+                "pago_ns": 0
+            },
+            "cesantias": {
+                "pago": 100,
+                "porcentaje": 5,
+                "pago_intereses": 5
+            },
+            "incapacidades": [
+                {
+                    "pago": "100",
+                    "fecha_inicio": "2021-11-10",
+                    "fecha_fin": "2021-11-13",
+                    "cantidad": "3",
+                    "tipo": "1"
+                }
+            ],
+            "licencias": {
+                "mp": [
+                    {
+                        "pago": "100",
+                        "fecha_inicio": "2021-11-06",
+                        "fecha_fin": "2021-11-08",
+                        "cantidad": "30"
+                    }
+                ],
+                "r": [
+                    {
+                        "pago": "100",
+                        "fecha_inicio": "2021-11-15",
+                        "fecha_fin": "2021-11-20",
+                        "cantidad": "5"
+                    }
+                ],
+                "nr": [
+                    {
+                        "fecha_inicio": "2021-11-01",
+                        "fecha_fin": "2021-11-05",
+                        "cantidad": "5"
+                    }
+                ]
+            },
+            "bonificaciones": [
+                {
+                    "s": "1000",
+                    "ns": "100"
+                }
+            ],
+            "auxilios": [
+                {
+                    "s": "100",
+                    "ns": "100"
+                }
+            ],
+            "huelgas_legales": [
+                {
+                    "fecha_inicio": "2021-11-01",
+                    "fecha_fin": "2021-11-05",
+                    "cantidad": "5"
+                }
+            ],
+            "compensaciones": [
+                {
+                    "o": "100",
+                    "e": "100"
+                }
+            ],
+            "bonos_epctv": [
+                {
+                    "s": "100",
+                    "ns": "100",
+                    "alimentacion_s": "100",
+                    "alimentacion_ns": "100"
+                }
+            ],
+            "comisiones": [
+                "100",
+                "100",
+                "100"
+            ],
+            "pagos_terceros": null,
+            "anticipos": [
+                "100",
+                "100",
+                "100",
+                "100",
+                "100"
+            ],
+            "dotacion": 100,
+            "apoyo": 100,
+            "teletrabajo": 100,
+            "bonificacion_retiro": 100,
+            "indemnizacion": 100,
+            "reintegro": 100,
+            "otros_conceptos": [
+                {
+                    "s": "100",
+                    "ns": "100",
+                    "descripcion": "Concepto 1"
+                },
+                {
+                    "s": "100",
+                    "ns": "100",
+                    "descripcion": "Concepto 2"
+                }
+            ]
+        },
+        "deducciones": {
+            "salud": {
+                "porcentaje": 4,
+                "deduccion": 100
+            },
+            "fondo_pension": {
+                "porcentaje": 4,
+                "deduccion": 100
+            },
+            "fondo_sp": {
+                "porcentaje": 1,
+                "porcentaje_sub": 1,
+                "deduccion": 100
+            },
+            "sindicatos": [
+                {
+                    "deduccion": "100",
+                    "porcentaje": "4"
+                }
+            ],
+            "sanciones": [
+                {
+                    "publica": "100",
+                    "privada": "100"
+                }
+            ],
+            "libranzas": [
+                {
+                    "deduccion": "100",
+                    "descripcion": "Libranza 1"
+                },
+                {
+                    "deduccion": "100",
+                    "descripcion": "Libranza 2"
+                }
+            ],
+            "pagos_terceros": [
+                "100"
+            ],
+            "anticipos": [
+                "100"
+            ],
+            "otras_deducciones": [
+                "100"
+            ],
+            "pension_voluntaria": 100,
+            "retencion_fuente": 100,
+            "afc": 100,
+            "cooperativa": 100,
+            "embargo_fiscal": 100,
+            "plan_complementarios": 100,
+            "educacion": 100,
+            "reintegro": 100,
+            "deuda": 100
+        },
+        "devengados_total": 1106454.00,
+        "deducciones_total": 80000.00,
+        "comprobante_total": 1026454.00
+    }
+}

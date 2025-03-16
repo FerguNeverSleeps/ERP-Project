@@ -1,0 +1,4 @@
+﻿Ext.define('Personal.view.ViewportController', {
+    extend: 'Ext.app.ViewController',
+    alias: 'controller.viewport'
+});

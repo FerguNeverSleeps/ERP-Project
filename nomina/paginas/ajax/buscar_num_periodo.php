@@ -1,0 +1,15 @@
+<?php
+session_start();  
+
+$id_periodo     = (isset($_GET['id_periodo'])) ? $_GET['id_periodo'] : '' ;
+require_once('../../../nomina/lib/database.php');
+$db          = new Database($_SESSION['bd']);
+ $query       = "SELECT numBisemana
+                FROM bisemanas 
+                WHERE numBisemana = '{$id_periodo}'";
+$filas       = $db->query($query)->fetch_assoc();
+
+echo $filas['numBisemana'];
+
+
+?>

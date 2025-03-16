@@ -1,0 +1,1 @@
+{"message":"La n\u00f3mina con ID TEST0015733 se encuentra en proceso de env\u00edo ante la DIAN.","id":"TEST0015733"}

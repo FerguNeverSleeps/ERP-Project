@@ -1,0 +1,9 @@
+.factura_detal .panel-filtro{
+padding: 15px;
+background: #F8F8F8;
+}
+
+.factura_detal .btn_filtro_factura_detal{
+    height: 26px;
+width: 80px;
+}

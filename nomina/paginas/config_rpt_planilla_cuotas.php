@@ -1,0 +1,143 @@
+<?php 
+require_once('../lib/database.php');
+
+$db = new Database($_SESSION['bd']);	
+?>
+<?php include("../header4.php"); ?>
+<link rel="stylesheet" type="text/css" href="../../includes/assets/plugins/jquery-multi-select/css/multi-select.css"/>
+<style>
+.form-horizontal .control-label {
+    text-align: center;
+    padding-top: 7px;
+}
+.portlet-title{
+	padding-right: 5px !important;
+}
+
+label.error {
+    color: #b94a48;
+}
+
+.margin-top-20{
+	margin-top: 20px
+}
+
+.text-left
+{
+	text-align: left !important;
+}
+
+.ms-container {
+    width: 100%;
+}
+
+.ms-container .ms-list {
+    height: 300px;
+}
+
+.ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection {
+    cursor: pointer;
+}
+</style>
+<div class="page-container">
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-10">
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								Par&aacute;metros del Reporte
+							</div>
+							<div class="actions">
+								<a class="btn btn-sm blue"  onclick="javascript: window.location='submenu_reportes.php?modulo=45';">
+									<i class="fa fa-arrow-left"></i> Regresar
+								</a>				
+							</div>
+						</div>
+						<div class="portlet-body form" id="blockui_portlet_body">
+
+							<form class="form-horizontal" id="form1" name="form1" method="post">
+								<div class="form-body">
+									<div class="form-group margin-top-20">
+										<div class="col-md-1"></div>
+										<label class="control-label col-md-11 text-left" style="padding-bottom: 10px">Planillas:</label>
+										<div class="col-md-1"></div>
+										<div class="col-md-10">
+											<?php
+												$sql = "SELECT codnom, descrip, codtip
+														FROM   nom_nominas_pago 
+														WHERE  codtip = '{$_SESSION['codigo_nomina']}'
+														ORDER BY anio DESC, mes DESC, frecuencia ASC";	
+												$res = $db->query($sql);
+											?>
+											<select multiple="multiple" class="multi-select" id="codnom" name="codnom[]">
+												<?php
+													while($planilla = $res->fetch_object())
+													{
+														$codtip = $planilla->codtip;
+														?> <option value="<?php echo $planilla->codnom; ?>"><?php echo $planilla->descrip; ?></option><?php
+													}
+												?>
+											</select>
+										</div>
+									</div>
+									<input type="hidden" name="codt" id="codt" value="<?php echo $codtip; ?>" >
+								</div>
+
+								<div class="form-actions fluid">
+									<div class="row">
+										<div class="col-md-11 text-center">
+											<button type="button" class="btn btn-sm blue active" id="btn-aceptar">Aceptar</button>
+										</div>
+									</div>
+								</div>
+
+							</form>
+
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+		</div>
+	</div>
+</div>
+<?php include("../footer4.php"); ?>
+<script src="../../includes/assets/plugins/jquery-multi-select/js/jquery.multi-select.js"></script>
+<script src="../../includes/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="../../includes/assets/plugins/jquery-validation/localization/messages_es.js"></script>
+<script src="../../includes/assets/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    $('#codnom').multiSelect();
+
+	$("#btn-aceptar").click(function(){	
+
+	    var codnom = $("#codnom").val();
+	    var codtip = $("#codt").val();
+	    
+
+	   	if(!codnom)
+	   	{
+	   		alert('Debe seleccionar al menos una planilla');
+	   		return false;
+	   	}
+	   	//codnom
+//codtip
+		abrirVentana('horizontal_nomina_xls_planilla_mensual_cuota.php?codnom='+codnom+'&codtip='+codtip,660,800);
+	});
+});	
+
+function abrirVentana(pagina, alto, ancho, left=0, top=0) 
+{
+	//location.href=pagina; 
+    window.open(pagina, 'mainWindow', 'width='+ ancho +', height='+ alto +', left='+ left +', top='+top);
+}
+</script>
+</body>
+</html>

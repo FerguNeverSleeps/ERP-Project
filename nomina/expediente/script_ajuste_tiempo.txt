@@ -1,0 +1,136 @@
+if ({tipo_justificacion} == 7)
+{
+               if ({Tipo} == 0)
+               {
+                              if ({dias} > 0)
+                              {             
+                                              {tiempo} = {dias} * -1;
+                              }             
+               }
+               else
+               {
+                              {tiempo} = {dias};
+               }
+}
+else
+{
+               if ({dias} > 0)
+               {
+                              $tiempofinal = ({dias} * :sunglasses: +  {horas} + ({minutos}/60);
+               }
+               else
+               {             
+                              $tiempofinal = {horas} + ({minutos}/60);
+               }
+              
+               if ({Tipo} == 0)
+               {
+                              if ($tiempofinal > 0)
+                              {             
+                                              {tiempo} = $tiempofinal * -1;
+                              }             
+               }
+               else
+               {
+                              {tiempo} = $tiempofinal;
+               }
+}
+if ({tipo_justificacion} == 3)
+{             
+               if ({Tipo} == 1)
+               {
+               $sql_q = "SELECT valida_tiempo_e FROM param_ws";
+               sc_lookup(rs1, $sql_q);
+              
+               if(count({rs1}) > 0)
+               {
+                              $valida_t = {rs1[0][0]};
+               }
+                             
+               //$query_date = date("Ymd");
+               $query_date = {fecha};
+               // First day of the month.
+               $dia1 = date('Y-m-01', strtotime($query_date));
+              
+               // Last day of the month.
+               $dia2 = date('Y-m-t', strtotime($query_date));
+
+                              $sql = "SELECT SUM(tiempo)
+                                              FROM dias_incapacidad
+                                              WHERE  usr_uid = '{usr_uid}'
+                                              AND tipo_justificacion = {tipo_justificacion}
+                                              AND fecha >='$dia1' and fecha <='$dia2' and tiempo > 0
+                                              GROUP BY usr_uid, tipo_justificacion";
+                             
+                              sc_lookup(rs, $sql);
+                              $count = count({rs});
+                              //sc_error_message($count);
+                              //sc_error_exit();
+              
+                              if(count({rs}) > 0)
+                              {
+                                              $val = {rs[0][0]} + {tiempo};
+                              }
+                              else {
+                                              $val = {tiempo};
+                              }
+                             
+                              //sc_error_message($val);
+                              //sc_error_exit();
+                              if ($val >= 40)
+                              {
+                                              if ($valida_t == 1)
+                                              {             
+                                                              sc_error_message("Este funcionario ya cumplio con las horas mensuales.Verifique.");
+                                                              sc_error_exit();
+                                              }
+                                              else {
+                                                              ?>
+                                                              <script>
+                                                                             alert('Este funcionario ya cumplio con las horas mensuales.Verifique.');
+                                                              </script>
+                                                              <?php
+                                              }
+                              }                                                            
+                                             
+               }
+               /*else {
+                              //Valida Tiempo
+                              $sql = "SELECT IFNULL(SUM(tiempo), 0) FROM dias_incapacidad ".
+                                                 " WHERE usr_uid= '" . {usr_uid}. "' AND tipo_justificacion = 3 " .
+                                                 " AND fecha_vence > CURDATE() ";
+                             
+                              //sc_error_message($sql);
+                              //sc_error_exit();          
+                              sc_lookup(rs, $sql);
+                                             
+                              if(count({rs}) > 0)
+                              {
+                                              $saldo = {rs[0][0]};
+                              }
+                              else {
+                                              $saldo = 0;
+                              }
+
+                              $tot = $saldo + {tiempo};
+                              //sc_error_message($tot);
+                              //sc_error_exit();          
+                              if ($tot > 0)
+                              {             
+                                              //Ejecutar el procedimiento alamacenado para disminuir
+                                              //$sql = " Call sp_tiempo_compensatorio(3," .{tiempo}.",'".{observacion}."', 0,0,0,'". {usr_uid}. "','')";
+                                              //sc_error_message($sql);
+                                              //sc_error_exit();
+                                             
+                                              //sc_exec_sql($sql);
+                                             
+                                              //sc_error_exit();
+                                              //sc_exit(ref);
+                              }
+                              else {
+                                              sc_error_message("Este funcionario no tiene tiempo para disminuir. Verifique.");
+                                              sc_error_exit();
+                              }             
+               }*/        
+                             
+}

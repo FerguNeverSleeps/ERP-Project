@@ -1,0 +1,27 @@
+.portlet > .portlet-body.blue, .portlet.blue {
+    background-color: #ffffff !important;
+}
+
+.portlet > .portlet-title > .caption {
+    font-family: helvetica, arial, verdana, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-horizontal .control-label {
+    padding-top: 3px;
+    text-align: left;
+}
+
+.form-body{
+	padding-bottom: 5px;
+}
+
+.alert {
+  padding: 10px;
+}
+
+label[for=fecha_inicio].error, label[for=fecha_fin].error
+{
+    margin-bottom: 0px;
+}

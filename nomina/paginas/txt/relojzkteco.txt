@@ -1,0 +1,13 @@
+﻿11    	LAISA CONSTANTINEAU	21/10/2015 03:05:46	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	21/10/2015 03:05:53	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	21/10/2015 19:48:43	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	22/10/2015 11:41:37	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	22/10/2015 13:20:49	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	22/10/2015 14:32:27	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	22/10/2015 17:59:45	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	23/10/2015 08:06:39	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	23/10/2015 13:29:49	Entrada	Suzuki      	0               
+11    	LAISA CONSTANTINEAU	23/10/2015 14:20:48	Entrada	Suzuki      	0               
+9999     	xxx xxxxx     	12/12/2119 12:12:12 a. m. 	Entrada	Suzuki      	0              
+9999     	xxx xxxxx     	03/16/2016 11:11:11 a. m. 	Entrada	Suzuki      	0              
+9999     	xxx xxxxx     	03/16/2016 11:11:11 a. m. 	Entrada	Suzuki      	0               

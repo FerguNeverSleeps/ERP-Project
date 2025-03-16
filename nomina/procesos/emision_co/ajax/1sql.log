@@ -1,0 +1,3 @@
+UPDATE nom_nominas_pago
+        SET status_dian = :status
+        WHERE codnom IN (12,13) AND tipnom = :tipnom;

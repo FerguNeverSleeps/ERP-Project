@@ -1,0 +1,81 @@
+<?php 
+session_start();
+	
+include ("../header4.php");
+include("../lib/common.php");
+include("func_bd.php");	
+?>
+<?php    
+    $registro_id=$_POST['registro_id'];
+    if(isset($_POST['nombre'])) {
+
+        $nombre=$_POST['nombre']; 
+        
+        $sql="UPDATE `solicitudes_tipos` SET `descrip_solicitudes_tipos` = '$nombre' 
+        WHERE `id_solicitudes_tipos` = '$registro_id'";
+
+        $insertado = sql_ejecutar($sql);
+        if($insertado) 
+        {           
+            echo "<script>alert('SOLICITUD DE RECLAMO ACTUALIZADO EXITOSAMENTE');location.href='config_solicitudes.php';</script>";
+        }
+        else
+        {
+            echo "<script>alert('HUBO UN ERROR AL ACTUALIZAR SU SOLICITUD');location.href='config_solicitudes.php';</script>";     
+        }
+    }
+?>
+<form id="form1" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<div class="page-container">
+	<div class="page-wrapper-containter">
+		<div class="page-content">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								Editar solicitud
+							</div>
+							<div class="actions">
+								<a class="btn btn-sm blue"  href="config_solicitudes.php">
+									<i class="fa fa-arrow-left"></i> Regresar
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">
+								<div class="col-md-12 text-center">
+                                    <div class="form-group">                                       
+                                        <div class="float-left" style="margin-right:95%;">
+                                            <label for="nombre">Nombre:</label>
+                                        </div>
+                                        <input type="text" name="nombre" maxlength="60" class="form-control" placeholder="Ingrese nombre de la nueva solicitud" pattern="[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*" title="El nombre debe tener por lo menos 1 caracter al inicio (Numeros no permitidos)" required>
+                                    </div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">&nbsp;</div>
+							</div>
+							<div class="row">
+		                        <div class="col-md-5">
+		                        </div>                    
+		                        <div class="col-md-1">                                                            	
+                                    <button type="submit" class="btn blue button-next">Editar</button>
+                                    <input name="registro_id" type="hidden" value="<?php echo $registro_id ?>">
+		                        </div>                                      		                        
+		                    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+
+</body>
+<?php
+include ("../footer4.php");
+
+ ?>
+</html>

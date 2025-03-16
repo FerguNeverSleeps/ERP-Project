@@ -1,0 +1,41 @@
+.portlet > .portlet-body.blue, .portlet.blue {
+    background-color: #ffffff !important;
+}
+
+.portlet > .portlet-title > .caption {
+    font-family: helvetica, arial, verdana, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-horizontal .control-label {
+    padding-top: 3px;
+    text-align: left;
+}
+
+.form-body{
+	padding-bottom: 5px;
+}
+
+h4{
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+
+.margen-inferior{
+	padding-bottom: 10px
+}
+
+label[for=posicion_dia], label[for=posicion_mes], label[for=posicion_anio]
+{
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.radio-list label{
+	padding-bottom: 18px;
+}
+
+.radio-list label:last-child{
+	padding-bottom: 10px;
+}

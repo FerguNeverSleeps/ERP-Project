@@ -1,0 +1,6 @@
+{
+	"name": "mpessolano/control-asistencia",
+	"require": {
+		"doctrine/dbal": "2.5.2"
+	}
+}

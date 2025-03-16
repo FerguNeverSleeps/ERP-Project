@@ -1,0 +1,14 @@
+===============================================================================
+Información
+===============================================================================
+
+La tabla nomtipos_constancia permite agregar constancias y cartas de trabajo 
+personalizadas, creadas por el usuario y cuyo contenido no lo conoce a priori 
+el programador.
+
+El usuario podrá crear sus modelos de cartas/constancias desde el menú 
+Configuración => Constancias
+
+Los reportes con contenido fijo, es decir, no modificables directamente por el 
+usuario deberían incluirse en otro directorio
+===============================================================================

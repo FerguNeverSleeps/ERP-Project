@@ -1,0 +1,105 @@
+/* tables */
+table.tablesorter {
+/*	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;*/
+}
+table.tablesorter tb-head tr th, table.tablesorter tfoot tr th {
+/*	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;*/
+	padding: 4px;
+}
+table.tablesorter head tr .header {
+	background-image: url(../imagenes/azul/bg.gif);
+/*	background-repeat: no-repeat;
+	background-position: center right;*/
+	cursor: pointer;
+                background-color: #5084A9;
+                color: #EEEEEE;
+}
+table.tablesorter tbody td {
+    border: 1px solid #FFFFFF;;
+/*	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+                 border: 1px solid #FFFFFF;;*/
+}
+table.tablesorter tbody tr.odd td {
+	/*background-color:#F0F0F6;*/
+}
+table.tablesorter tb-head tr .headerSortUp {
+/*                  font-weight:bold; text-align:center;*/
+	background-image: url(../imagenes/azul/asc.gif);
+}
+table.tablesorter tb-head tr .headerSortDown {
+                 /*font-weight:bold; text-align:center;*/
+	background-image: url(../imagenes/azul/desc.gif);
+}
+table.tablesorter tb-head tr .headerSortDown, table.tablesorter tb-head tr .headerSortUp {
+/*background-color: #8dbdd8;*/
+}
+    
+table.tablesorter seleccionLista td{
+    border: 1px solid #FFFFFF;;
+}
+table.tablesorter seleccionLista, table.tablesorter navegacion, table.tablesorter tb-head{
+	background-color: #5084A9;
+	color: #EEEEEE;
+}
+table.tablesorter tr.tb-head{
+    font-weight:bold; text-align:center;
+}
+    .modal {
+    background-color:#dfe8f6;
+    display:none;
+    top:100;
+    width:350px;
+    padding:15px;
+    font-family: Arial;
+    font-size: 16px;
+    padding-left: 10px;
+    border:2px solid #333;
+
+    opacity:0.8;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-box-shadow: 0 0 50px #ccc;
+    -webkit-box-shadow: 0 0 50px #ccc;
+  }
+
+  .modal h2 {
+/*    background:url(/media/img/global/info.png) 0 50% no-repeat;*/
+    background-color: yellowgreen;
+    margin:0px;
+    padding:10px 0 10px 45px;
+    border-bottom:1px solid #333;
+    font-size:20px;
+  }
+ 
+  .button_report{
+    -moz-border-radius: 5px; padding: 5px; color: black; font-weight: bold;
+    -webkit-border-radius: 5px; font-size: 13px;  width: 70px;
+
+    top:400px;
+    border: 1px solid #666666;
+    font-family: Arial,Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom:6px;
+    width: 45px;
+    height: 45px;
+    font-variant: normal;
+    font-size: 13px;
+    text-decoration: none;
+     background: white; color: black;
+  }
+  
+  .button_report:hover {
+      cursor: pointer;
+  }
+  
