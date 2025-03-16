@@ -1,0 +1,34 @@
+body{
+	background-color: #EEECFF !important;
+}
+
+.page-full-width .page-content {
+    background-color: #EEECFF !important;
+}
+
+.page-header-fixed .page-container{
+	margin-top: 0px !important;
+}
+
+.portlet.box.blue > .portlet-title{
+	background-color: #1570a6 !important;
+	background-color: #157fcc !important;
+}
+
+.portlet > .portlet-title > .actions > .btn {
+		/*margin-top: -7px;*/
+}
+
+.pagination .prev a, .pagination .next a{
+	padding-top: 7px;
+	padding-bottom: 8px;
+}
+
+.portlet > .portlet-title > .caption {
+    font-family: helvetica, arial, verdana, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-bottom: 7px;
+    padding-top: 3px;
+}

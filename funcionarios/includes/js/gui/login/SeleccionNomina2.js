@@ -1,0 +1,98 @@
+Ext.onReady(function(){
+
+	Ext.define('Empresa',{
+        extend: 'Ext.data.Model',
+        fields: [
+            { mapping: 'codigo',name: 'codigo', type: 'int' },
+			{ mapping: 'nombre',name: 'nombre', type: 'string' },
+			{ mapping: 'bd_nomina',name: 'bd_nomina', type: 'string'  }
+		]
+    });
+
+	Ext.create("widget.window",{
+	    xtype: 'login',
+
+	    /*requires: [
+	        'Ext.form.Panel',
+	        'Ext.layout.container.Form',
+	        'Ext.layout.container.Column',
+	        'Ext.form.field.Text',
+	        'Ext.form.field.ComboBox'
+	    ],*/
+	    bodyPadding: 10,
+	    title: TITULO,
+	    
+	    
+	    closable: false,
+	    draggable:false,
+	    autoShow: true,
+	    plain: true,
+	    items: {
+	        xtype: 'form',
+	        id:'form-login',
+        	reference: 'form-login',
+	        layout: 'column',
+		    
+		    defaults: {
+		        layout: 'form',
+		        xtype: 'container',
+		        defaultType: 'textfield',
+		        style: 'width: 50%;padding: 5 5 5 5;'
+		    },
+	        items: [
+		        {
+		        	items:[
+		        		{
+				            xtype: 'component',
+				            id: 'app-login-logo',
+				            width:300,
+				            height:80,
+				            html: '<img src="../../includes/assets/img/logo_selectra.png" width="260" height="80" alt="logo">'
+				        },				        
+		        		{
+					        xtype: 'textfield',
+					        name:'seleccion_nomina',
+					        id:'seleccion_nomina',
+					        hidden:true,
+					        value:1
+					    },
+		        		{
+					        xtype: 'radiogroup',
+					        id:'tipo_nomina',
+					        // Arrange radio buttons into two columns, distributed vertically
+					        columns: 1,
+					        vertical: true,
+					        items: ARRAY_NOMINAS
+					    }
+		        	]
+		        }
+	        ]
+
+	        
+	        ,
+	        buttons: [
+	        	{
+	            text: 'Continuar',
+	            formBind: true,
+	            listeners: {
+	                click: function(){   
+				    	//var controller = this;
+				    	var form = Ext.getCmp('form-login');//this.lookupReference('form-login');
+				    	if (form.isValid()) {
+				            var params = new Array();
+				            //var paramsForm = form.getValues();
+				            //var paramsSubmit = new Array();
+				            var seleccion_nomina = Ext.getCmp("seleccion_nomina").getValue();
+				            var valNom = Ext.getCmp("tipo_nomina").getValue();
+				            //var valNom = opt.getValue();
+				            //console.log(valNom.opt)
+				            //alert("1")
+				            document.location.href = "seleccionar_nomina2.php?parentreload&seleccion_nomina="+seleccion_nomina+"&opt="+valNom.opt;
+				        }
+				    }
+	            }
+	        }]
+	    }
+	});
+
+});
