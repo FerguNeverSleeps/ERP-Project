@@ -1,0 +1,171 @@
+/*!
+ * Ext JS Library 3.4.0
+ * Copyright(c) 2006-2011 Sencha Inc.
+ * licensing@sencha.com
+ * http://www.sencha.com/license
+ */
+#referencia  {
+    background-color: #fff;
+    text-shadow: #fff 0 1px 0;
+}
+
+#referencia ul {
+    position: relative;
+    display: block;
+    height: auto;
+    font-size: 85%;
+}
+
+#referencia ul li img {
+    margin-bottom: 1px;
+}
+
+#referencia ul li {
+    float: left;
+    padding: 8px 8px;
+    margin: 5px;
+/*    margin: 10px 0 0 25px;*/
+    text-align: center;
+    line-height: 1.25em;
+    color: #333;
+    font-family: "Helvetica Neue",sans-serif;
+    /*height: 113px;*/
+    height: 125px;
+    width: 140px;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+/*#referencia ul li.phone-hover {
+    background-color: #eee;
+}*/
+
+#referencia ul li.x-view-selected {
+    background-color: rgba(100, 100, 100, .15);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+#referencia ul li img {
+/*    display: block;*/
+}
+
+#referencia li strong {
+    color: #000;
+    display: block;
+    width: 140px
+}
+
+#referencia li span {
+    color: #999;
+}
+
+#referencia li span .stockMenor {
+    color: #CC0E1B;
+    font-weight:bolder;
+}
+
+#referencia li span .stockMayor{
+    color: #29A623;
+    font-weight:bolder;
+}
+
+/*
+segunda referencia
+*/
+
+#referencia-2  {
+    background-color: #fff;
+    text-shadow: #fff 0 1px 0;
+}
+
+#referencia-2 ul {
+    position: relative;
+    display: block;
+    height: auto;
+    font-size: 85%;
+}
+
+#referencia-2 ul li img {
+    margin-bottom: 1px;
+}
+
+#referencia-2 ul li {
+    float: left;
+    /*padding: 8px 17px;*/
+    padding: 1px 1px;
+    margin: 5px;
+/*    margin: 10px 0 0 25px;*/
+    text-align: center;
+    line-height: 1.25em;
+    color: #333;
+    font-family: "Helvetica Neue",sans-serif;
+    /*height: 113px;*/
+    /*height: 125px;
+    width: 112px;*/
+    height: 30px;
+    width: 250px;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+/*#referencia ul li.phone-hover {
+    background-color: #eee;
+}*/
+
+#referencia-2 ul li.x-view-selected {
+    background-color: rgba(100, 100, 100, .15);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+#referencia-2 ul li img {
+/*    display: block;*/
+    float: left;
+}
+
+#referencia-2 li strong {
+    color: #000;
+    display: block;
+    float: left;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+#referencia-2 li span {
+    color: #999;
+}
+
+#referencia-2 li span .stockMenor {
+    color: #CC0E1B;
+    font-weight:bolder;
+}
+
+#referencia-2 li span .stockMayor{
+    color: #29A623;
+    font-weight:bolder;
+}
+
+.x-slider-horz .x-slider-thumb {
+    background-image: url(images/slider-thumb.png);
+}
+
+.iconCesta{
+    background-image: url(../imagenes/shop-cart-add-icon.png)
+}
+.iconCestaConfirmar{
+    background-image: url(../imagenes/shop-cart-apply-icon.png)
+}
+.iconZoom{
+    background-image: url(../imagenes/Zoom-icon.png)
+}
+
+.spinner{
+    width: 40px;
+    height:20px;
+    font-size:11px;
+}

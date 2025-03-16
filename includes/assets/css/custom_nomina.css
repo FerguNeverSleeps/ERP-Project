@@ -1,0 +1,20 @@
+/* here you can put your own css to customize and override the theme */
+
+.pricing:hover {
+  border:3px solid #35aa47;
+}
+
+.pricing-head h3 {
+  font-weight: 300;
+  color:#fafafa;
+  padding:12px 0;
+  font-size:27px;
+  background:#35aa47;
+  border-bottom:solid 1px #41b91c;
+}
+
+.radio-list{
+	width: 300px;
+	margin: auto;
+	text-align: left;
+}
